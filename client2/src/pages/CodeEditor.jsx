@@ -13,16 +13,13 @@ import { usePosUpdate } from "../hooks/usePosUpdate";
 export default function CodeEditor() {
 
     const [theme, changeTheme] = useAtom(themeAtom);
-    const [code, changeCode] = useAtom(codeAtom);
     const [language, changeLanguage] = useAtom(languageAtom);
     const ydoc = useMemo(() => new Y.Doc(), []);
     const [editor, setEditor] = useAtom(editorAtom);
     const handleEditorDidMount = (editor, monaco) => {
         setEditor(editor);
     };
-    const handleCodeChange = (value, event) =>{
-        changeCode(value);
-    }
+
     // lifecycle of provider
     useProvider(ydoc)
 
@@ -41,9 +38,7 @@ export default function CodeEditor() {
             width="80vw"
             theme={theme.value}
             language={language.value}
-            value={code}
             onMount={handleEditorDidMount}
-            onChange={handleCodeChange}
         />
     );
 }
