@@ -14,9 +14,7 @@ A real-time collaborative code editor built with **React**, **Monaco Editor**, *
 
 ## 🪛 Todo
 
-- **Rate Limiting**
-- **Throttling user spams**
-- **Maybe send updates not too often**
+- **Make the UI load faster**
 ![Create Room UI](./snapshots/create-room.png)
 ![Join Room UI](./snapshots/join-room.png)
 ![Editor UI](./snapshots/editor1.png)
