@@ -12,5 +12,5 @@ A real-time collaborative code editor built with **React**, **Monaco Editor**, *
 - **Tailwind CSS** – UI styling
 - **Express.js** – room management backend
 
-![Login page]('\snapshots\Screenshot 2025-07-03 113142.png')
+![Login page]('./snapshots/Screenshot 2025-07-03 113142.png')
 
