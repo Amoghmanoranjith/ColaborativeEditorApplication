@@ -15,5 +15,5 @@ A real-time collaborative code editor built with **React**, **Monaco Editor**, *
 ![Create Room UI](./snapshots/create-room.png)
 ![Join Room UI](./snapshots/join-room.png)
 ![Editor UI](./snapshots/editor1.png)
-![Editor with collaborators](./snapshots/edito2.png)
+![Editor with collaborators](./snapshots/editor2.png)
 
