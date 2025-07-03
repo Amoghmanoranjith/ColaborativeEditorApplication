@@ -53,9 +53,7 @@ export default function CreateRoom() {
                     required
                 />
 
-                <div className="flex justify-center">
                     <LanguageChanger />
-                </div>
 
                 <button
                     type="submit"
