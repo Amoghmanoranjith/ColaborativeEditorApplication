@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+.my-rooms-container {
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+}
+
+.room-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.room-card {
+  background: rgb(254, 243, 226);
+  border: 2px solid rgb(243, 198, 35);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(250, 129, 47, 0.4);
+}
+
+.room-card button {
+  background-color: rgb(255, 178, 44);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.room-card button:hover {
+  background-color: rgb(250, 129, 47);
+}

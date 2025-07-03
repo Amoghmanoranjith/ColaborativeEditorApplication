@@ -1,0 +1,61 @@
+.create-room-container {
+  background-color: rgb(254, 243, 226);
+  border: 2px solid rgb(243, 198, 35);
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(250, 129, 47, 0.1);
+  font-family: 'Montserrat', sans-serif;
+  margin: 0; /* prevent unnecessary vertical offset */
+}
+
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid rgb(243, 198, 35);
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.error-msg {
+  color: rgb(250, 129, 47);
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.success-msg {
+  color: rgb(43, 130, 39); /* Optional darker green for better contrast */
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(255, 178, 44);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(250, 129, 47);
+  transform: translateY(-2px);
+}

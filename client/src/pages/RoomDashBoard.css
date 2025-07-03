@@ -1,0 +1,58 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Container for sidebar - fixed, scrollable */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: rgb(254, 243, 226);
+  border-right: 2px solid rgb(243, 198, 35);
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+/* CreateRoom container centered absolutely on the full viewport */
+.create-room-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  width: 90vw; /* responsive */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(250, 129, 47, 0.1);
+  box-sizing: border-box;
+  z-index: 5; /* behind sidebar or above depending on use */
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+
+  /* Fix: allow scrolling only when content overflows */
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* Most importantly: force full height */
+  height: 100vh;
+  box-sizing: border-box;
+}
+
