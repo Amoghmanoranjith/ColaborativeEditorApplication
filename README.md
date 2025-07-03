@@ -12,5 +12,8 @@ A real-time collaborative code editor built with **React**, **Monaco Editor**, *
 - **Tailwind CSS** – UI styling
 - **Express.js** – room management backend
 
-![Login page]('./snapshots/Screenshot 2025-07-03 113142.png')
+![Create Room UI](./snapshots/create-room.png)
+![Join Room UI](./snapshots/join-room.png)
+![Editor UI](./snapshots/editor1.png)
+![Editor with collaborators](./snapshots/edito2.png)
 
