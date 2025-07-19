@@ -32,6 +32,7 @@ export default function MainPage() {
     if (!processing)
       return;
     setTimeout(() => {
+      console.log(token);
       const response = handleStatus(token);
       response.then(result => {
         const data = result.data;
@@ -68,18 +69,17 @@ export default function MainPage() {
             className="w-full h-9 px-4 py-1.5 rounded-md bg-white border border-gray-300 text-black font-lexend transition-all duration-200 ease-in-out hover:border-black hover:shadow-[0_0_0_2px_black] hover:scale-[1.02]"
             onClick={() => {
               const response = handleCompile(language, code, stdin);
+              // send the code and stdin for compiler
               response.then(result => {
-                console.log("in promise")
                 const data = result.data
                 const token = data.token, status = result.status;
-                console.log(token, "received");
-                console.log(status)
-                if (status === 201) {
-                  setProcessing(true)
+                if (status === 200 || status === 201) {
                   setToken(token);
+                  setProcessing(true);
                 }
                 else {
                   // handle other cases
+                  console.log(status)
                 }
               }).catch(error => { throw error; })
             }}

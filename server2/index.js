@@ -42,6 +42,7 @@ app.get('/join-room/:roomName', (req, res) => {
 app.post('/compile', async (req, res) => {
   try {
     const { language_id, source_code, stdin } = req.body;
+    console.log(language_id, source_code, stdin);
     const options = {
       method: 'POST',
       url: 'https://judge0-ce.p.rapidapi.com/submissions',
@@ -57,18 +58,20 @@ app.post('/compile', async (req, res) => {
       },
       data: {
         language_id: language_id,
-        source_code: btoa(source_code),
-        stdin: btoa(stdin)
+        source_code: source_code,
+        stdin: stdin
       }
     };
     const response = await axios.request(options);
+    console.log("response from rapid api received");
     return res.status(200).json(response.data);
   } catch (error) {
+    console.log("error with compilation");
     console.log(error);
   }
 })
 
-app.get('/status', async (req, res) => {
+app.post('/status', async (req, res) => {
   try {
     const { token } = req.body;
     const options = {
@@ -84,10 +87,9 @@ app.get('/status', async (req, res) => {
       }
     }
     const response = await axios.request(options);
-    response.stdout = atob(response.stdout);
-    response.stderr = atob(response.stderr);
     return res.status(200).json(response.data);
   } catch (error) {
+    console.log("error with getting status");
     console.log(error);
   }
 })

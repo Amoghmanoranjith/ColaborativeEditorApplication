@@ -16,6 +16,7 @@ export default function CodeEditor() {
     const [language, changeLanguage] = useAtom(languageAtom);
     const ydoc = useMemo(() => new Y.Doc(), []);
     const [editor, setEditor] = useAtom(editorAtom);
+    const [code, setCode] = useAtom(codeAtom);
     const handleEditorDidMount = (editor, monaco) => {
         setEditor(editor);
     };
@@ -39,6 +40,9 @@ export default function CodeEditor() {
             theme={theme.value}
             language={language.value}
             onMount={handleEditorDidMount}
+            onChange={(value)=>{
+                setCode(value);
+            }}
         />
     );
 }
