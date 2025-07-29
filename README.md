@@ -13,7 +13,8 @@ A real-time collaborative code editor built with **React**, **Monaco Editor**, *
 - **Express.js** – room management backend
 
 ## 🪛 Todo
-
+- **create env**
+- **persist sessions**
 - **Make the UI load faster**
 ![Create Room UI](./snapshots/create-room.png)
 ![Join Room UI](./snapshots/join-room.png)
