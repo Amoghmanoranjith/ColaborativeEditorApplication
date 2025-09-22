@@ -6,7 +6,7 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-function createHeadlessClient(roomId, name, durationMs = 60000) {
+function createHeadlessClient(roomId, name, durationMs = 9000000) {
   const ydoc = new Y.Doc();
   const wsProvider = new WebsocketProvider(
     'ws://localhost:8080', 
@@ -40,8 +40,8 @@ function createHeadlessClient(roomId, name, durationMs = 60000) {
 
 // Gradually spawn 100 clients
 (async () => {
-  const totalClients = 100;
-  const delayMs = 200; // 200ms between each client
+  const totalClients = 200;
+  const delayMs = 20; // 200ms between each client
 
   for (let i = 0; i < totalClients; i++) {
     console.log(`Creating client user${i}`);
